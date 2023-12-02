@@ -1,5 +1,5 @@
 $(function() {
-	validateLoginUsuarioBS4();
+	validateLoginUsuario();
 })
 
 function fncSweetAlert(type, text, url){
@@ -109,7 +109,7 @@ function fncSweetAlert(type, text, url){
 
 }
 
-function validateLoginUsuarioBS4(){
+function validateLoginUsuario(){
 
 	(function() {
 	  'use strict';

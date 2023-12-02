@@ -1,16 +1,9 @@
-<?php 
-
-  session_start();
-  //session_destroy();
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>A.P. | Proyecto-Fronend </title>
+  <title>A.P. | Listas de Compras</title>
 
   <link rel="shortcut icon" href="vista/css/dist/img/AdminLTELogo.png" type="image/x-icon">
 
@@ -74,26 +67,21 @@
     
   <!-- AdminLTE App -->
   <script src="vista/css/dist/js/adminlte.min.js"></script>
-
-  <script src="vista/css/dist/js/plantilla.js"></script>
   
 
 </head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
 
-<?php if(isset($_SESSION["usuario"])): ?>
-
-  <body class="hold-transition sidebar-mini">
-    <div class="wrapper">
-      
-      <?php
-        //include "modulos/barra_navegacion.php";
+    <?php
+        include "modulos/barra_navegacion.php";
         include "modulos/barra_lateral.php";
     ?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <?php
-        include "vista/". $_SESSION['usuario']->vista
+        include "vista/dashboard.php";
     ?>
   </div>
   <!-- /.content-wrapper -->
@@ -111,15 +99,4 @@
     </script>
 
 </body>
-
-<?php else: ?>
-
-  <body>
-
-    <?php include "vista/login.php" ?>
-    
-  </body>
-
-  <?php endif; ?>
-
 </html>

@@ -4,3 +4,4 @@ class PlantillaControlador{
         include "vista/plantilla.php";
     }
 }
+?>
